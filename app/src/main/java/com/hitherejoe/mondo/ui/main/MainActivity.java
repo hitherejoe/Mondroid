@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.hitherejoe.mondo.R;
 import com.hitherejoe.mondo.ui.base.BaseActivity;
@@ -31,6 +32,8 @@ public class MainActivity extends BaseActivity implements MainMvpView {
     @Bind(R.id.navigation_view) NavigationView mNavigationView;
 
     private ActionBarDrawerToggle mDrawerToggle;
+    private TextView mSignedInUserNameText;
+    private TextView mSignedInEmailText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,5 +92,9 @@ public class MainActivity extends BaseActivity implements MainMvpView {
         };
         mDrawerToggle.setDrawerIndicatorEnabled(true);
         mDrawerLayout.addDrawerListener(mDrawerToggle);
+
+        View navigationHeader = mNavigationView.inflateHeaderView(R.layout.drawer_header);
+        mSignedInUserNameText = (TextView) navigationHeader.findViewById(R.id.text_user_name);
+        mSignedInEmailText = (TextView) navigationHeader.findViewById(R.id.text_user_email);
     }
 }

@@ -22,6 +22,9 @@
         <item name="android:textColorSecondary">@android:color/white</item>
     </style>
 
+    <style name="AppTheme.NoActionBar.TransparentStatusBar">
+    </style>
+
     <style name="ButtonStyle" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/colorPrimaryDark</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
