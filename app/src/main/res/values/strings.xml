@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Mondo</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_feed">Feed</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 </resources>

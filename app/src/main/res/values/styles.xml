@@ -17,6 +17,11 @@
         <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
 
+    <style name="AppTheme.ToolbarStyle">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
     <style name="ButtonStyle" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@color/colorPrimaryDark</item>
         <item name="colorButtonNormal">@color/colorAccent</item>

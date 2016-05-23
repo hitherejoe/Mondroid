@@ -1,7 +1,7 @@
 package com.hitherejoe.mondo.ui.base;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.hitherejoe.mondo.MondoApplication;
@@ -9,7 +9,7 @@ import com.hitherejoe.mondo.injection.component.ActivityComponent;
 import com.hitherejoe.mondo.injection.component.DaggerActivityComponent;
 import com.hitherejoe.mondo.injection.module.ActivityModule;
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends AppCompatActivity {
 
     private ActivityComponent mActivityComponent;
 
