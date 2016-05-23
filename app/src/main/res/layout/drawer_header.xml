@@ -12,10 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/text_user_email"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="Joe Birch"
         android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text_user_email"
@@ -23,8 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="hitherejoebirch@googlemail.com"
-        android:textColor="@color/white"
+        android:textColor="@color/white_trans_80"
         android:textSize="16sp" />
 
 </RelativeLayout>
