@@ -15,12 +15,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar_main"
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_layout"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_scrollFlags="scroll|enterAlways"
-                app:theme="@style/AppTheme.ToolbarStyle" />
+                android:layout_height="wrap_content"
+                app:expandedTitleGravity="top|center_horizontal"
+                app:expandedTitleMargin="0dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_scrollFlags="scroll|enterAlways"
+                        app:theme="@style/AppTheme.ToolbarStyle" />
+
+                    <com.hitherejoe.mondo.ui.main.widget.BalanceView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp" />
+
+                </LinearLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
 
         </android.support.design.widget.AppBarLayout>
 

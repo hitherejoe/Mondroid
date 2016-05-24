@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.hitherejoe.mondo.R;
 import com.hitherejoe.mondo.ui.base.BaseActivity;
+import com.hitherejoe.mondo.ui.transactions.TransactionsFragment;
 
 import javax.inject.Inject;
 
@@ -49,6 +50,8 @@ public class MainActivity extends BaseActivity implements MainMvpView {
 
         setupNavigationDrawer();
 
+        getSupportFragmentManager().beginTransaction()
+                .add(mContentFrame.getId(), new TransactionsFragment()).commit();
     }
 
     @Override

@@ -5,4 +5,8 @@
     <string name="navigation_feed">Feed</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+
+    <!-- Balance View -->
+    <string name="title_balance">Balance</string>
+    <string name="title_spent_today">Spent Today</string>
 </resources>
