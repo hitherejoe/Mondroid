@@ -5,10 +5,8 @@ import android.text.format.DateUtils;
 
 import com.hitherejoe.mondroid.R;
 
-import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Currency;
 import java.util.Date;
 import java.util.Locale;
 
@@ -33,9 +31,4 @@ public class DateUtil {
         return null;
     }
 
-    public static String formatMoneyText(double amount, Currency currency) {
-        NumberFormat format = NumberFormat.getCurrencyInstance();
-        format.setCurrency(currency);
-        return format.format(amount / 100).replaceAll("-", "");
-    }
 }

@@ -1,11 +1,15 @@
 package com.hitherejoe.mondroid.data.model;
 
+import android.support.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import timber.log.Timber;
 
 public class Transaction implements Comparable<Transaction> {
     @SerializedName("account_balance")
@@ -18,23 +22,23 @@ public class Transaction implements Comparable<Transaction> {
     public Merchant merchant;
 
     @Override
-    public int compareTo(Transaction another) {
+    public int compareTo(@NonNull Transaction another) {
         SimpleDateFormat sdf =
                 new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault());
-        Date d = null;
+        Date date = null;
         try {
-            d = sdf.parse(created);
+            date = sdf.parse(created);
         } catch (ParseException e) {
-            e.printStackTrace();
+            Timber.e("There was a problem parsing the given date...");
         }
-        Date dd = null;
+        Date anotherDate = null;
         try {
-            dd = sdf.parse(another.created);
+            anotherDate = sdf.parse(another.created);
         } catch (ParseException e) {
-            e.printStackTrace();
+            Timber.e("There was a problem parsing the given date...");
         }
-        if (d != null && dd != null) {
-            return dd.compareTo(d);
+        if (date != null && anotherDate != null) {
+            return anotherDate.compareTo(date);
         }
         return 0;
     }

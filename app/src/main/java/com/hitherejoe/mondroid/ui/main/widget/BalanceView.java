@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.hitherejoe.mondroid.R;
 import com.hitherejoe.mondroid.data.model.Balance;
-import com.hitherejoe.mondroid.util.DateUtil;
+import com.hitherejoe.mondroid.util.MoneyUtil;
 
 import java.util.Currency;
 
@@ -59,11 +59,11 @@ public class BalanceView extends LinearLayout {
     }
 
     public void setBalance(double balance) {
-        mBalanceText.setText(DateUtil.formatMoneyText(balance, mCurrency));
+        mBalanceText.setText(MoneyUtil.formatMoneyText(balance, mCurrency));
     }
 
     public void setSpentToday(double spentToday) {
-        mSpentTodayText.setText(DateUtil.formatMoneyText(spentToday, mCurrency));
+        mSpentTodayText.setText(MoneyUtil.formatMoneyText(spentToday, mCurrency));
     }
 
     public void setCurrency(Currency currency) {

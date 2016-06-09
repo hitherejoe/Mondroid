@@ -10,6 +10,7 @@ import com.hitherejoe.mondroid.data.DataManager;
 import com.hitherejoe.mondroid.data.model.Transaction;
 import com.hitherejoe.mondroid.ui.main.MainActivity;
 import com.hitherejoe.mondroid.util.DateUtil;
+import com.hitherejoe.mondroid.util.MoneyUtil;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -61,9 +62,9 @@ public class MainActivityTest {
         onView(withText(R.string.title_spent_today))
                 .check(matches(isDisplayed()));
 
-        String balance = DateUtil.formatMoneyText(
+        String balance = MoneyUtil.formatMoneyText(
                 accountData.balance.balance, Currency.getInstance("GBP"));
-        String spentToday = DateUtil.formatMoneyText(
+        String spentToday = MoneyUtil.formatMoneyText(
                 accountData.balance.spentToday, Currency.getInstance("GBP"));
 
         onView(withText(balance))
