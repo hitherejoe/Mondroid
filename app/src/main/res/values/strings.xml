@@ -1,12 +1,21 @@
 <resources>
-    <string name="app_name">Mondo</string>
+    <string name="app_name">Mondroid</string>
 
-    <!-- Navigation Drawer -->
-    <string name="navigation_feed">Feed</string>
-    <string name="drawer_open">Open</string>
-    <string name="drawer_close">Close</string>
+    <!-- WelcomeActivity -->
+    <string name="button_login">Login</string>
 
-    <!-- Balance View -->
+    <!-- Main Activity -->
     <string name="title_balance">Balance</string>
     <string name="title_spent_today">Spent Today</string>
+    <string name="label_today">Today</string>
+    <string name="action_logout">Logout</string>
+    <string name="text_no_transactions">You have no transactions to display</string>
+    <string name="text_error_loading_account">Oops, there was an error loading your account</string>
+    <string name="text_try_again">Try again?</string>
+    <string name="text_check_again">Check again?</string>
+
+    <!-- Dialog -->
+    <string name="dialog_error_title">Oops</string>
+    <string name="dialog_error_authentication">There was an error whilst trying to authenticate your account, please try again</string>
+    <string name="dialog_action_ok">OK</string>
 </resources>

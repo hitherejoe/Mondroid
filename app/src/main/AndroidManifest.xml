@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hitherejoe.mondo">
+    package="com.hitherejoe.mondroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MondoApplication"
+        android:name=".MondroidApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,23 +12,36 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name="com.hitherejoe.mondroid.ui.launcher.LauncherActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar.TransparentStatusBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.hitherejoe.mondroid.ui.welcome.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Welcome">
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.LAUNCHER" />
 
                 <data
-                    android:host="redirecturi"
-                    android:scheme="your" />
+                    android:host="com.hitherejoe.mondroid"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.hitherejoe.mondroid.ui.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.TransparentStatusBar" />
 
     </application>
 
